@@ -16,6 +16,5 @@ export const SectionedProgressBar = (props:SectionedProgressBarPropsI) => {
         percentLeft = (percentLeft < props.sectionSizes[i] ? 0 : percentLeft - props.sectionSizes[i]);
         return <ProgressBarSection key={i} height={props.height} width={(props.sectionSizes[i]/100)*props.width} color={props.sectionColors[i]} fillPercent={thisSectionPercent}/>
     });
-    console.log(sections);
     return <div style={{width: props.width, border: "2px lightgray solid",display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "left"}}>{sections}</div>;
 }
